@@ -5,7 +5,7 @@ var para = document.querySelectorAll(".showcase div")
 for(i = 0; i < para.length; i++){
 	para[i].classList.add("d-none");
 	para[1].classList.remove("d-none");
-	btn[1].style.borderColor = "orange";
+	btn[1].style.transform = "scale(1.2)";
 }
 
 // seting indeces function
@@ -41,7 +41,7 @@ function attr(items){
 				items[i].setAttribute("clicked", false);
 				e.target.setAttribute("clicked", true);	
 				items[i].getAttribute("clicked") == "true" ?
-				items[i].style.borderColor = "orange":items[i].style.borderColor = "#fff";
+				items[i].style.transform = "scale(1.2)":items[i].style.transform = "scale(1)";
 				imgChange(e.target, para[i], para);				
 			}	            			
 		})		

@@ -1,5 +1,5 @@
 body{
-	background: url('./img/main.png') no-repeat;
+	background: url('./img/main.jpg') no-repeat;
 	background-position:center;
 	background-size: cover;
 }
@@ -13,11 +13,13 @@ h1{
 }
 .para{
     width:100px;
-	border: 5px solid #fff;
-    transition: 0.2s;	
+    transition: 0.2s;
+    border-radius: 2px;
+    margin: 0 5px;
+    box-shadow: 3px 3px 5px #fff;	
 }
 .para:hover{
-	border: 5px solid orange;
+	box-shadow: 3px 3px 5px red;
 	cursor:pointer;
 }
 .showcase{
@@ -35,6 +37,7 @@ h1{
 .showcase > div > img{
 	width: 100%;
 	box-shadow: 5px 5px 10px #000;
+	border-radius:5px;
 }
 .hide{
 	transition:all 0.4s linear;
@@ -46,17 +49,36 @@ h1{
 	animation:show 0.5s;
 	opacity: 1;
 }
+.playBtn{
+	cursor:pointer;
+	border:none;
+	padding:3px 10px;
+	background-image: radial-gradient(#fff, #000);
+	color: #000;
+	font-size:40px;
+	font-weight:bold;
+	border-radius:5px;
+	text-decoration: none;
+	box-shadow:2px 2px 2px #000;
+	position:absolute;
+	left:50%;
+	top:70%;
+	transition:.3s;
+}
+.playBtn:hover{
+	transform:scale(1.2);
+}
 @-webkit-keyframes hide{
 	0%{
 		
 	}
 	100%{
-		transform: translate(-100vh,0);
+		transform:rotate(15deg) translate(-100vh,0);
 	}
 }
 @-webkit-keyframes show{
 	0%{
-		transform: translate(100vh,0);
+		transform:rotate(-15deg) translate(100vh,0);
 	}
 	100%{
 		
