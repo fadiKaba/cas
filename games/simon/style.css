@@ -1,0 +1,124 @@
+body{
+    height: 100%;
+    width: 100%;
+    background-image: url(./img/wood.jpg);
+	background-position:center;
+	background-size:cover;
+	background-repeat:no-repeat;
+    display: grid;
+    text-align: center;
+}
+h1{
+    color:#fff;
+}
+.container{
+    margin:auto;
+    position: relative;
+    top:20%;
+    height: 30rem;
+    width:30rem;
+    border-color: black;
+    background-color: #fff;
+    border-radius: 50%;
+    border:#000 solid 10px;
+    overflow: hidden; 
+	box-shadow:5px 5px 10px #000;
+}
+.color-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;    
+}
+.mid{
+    position: absolute;
+    top:25%;
+    left:24%;
+    background-color: #888;
+    height: 14rem;
+    width:14rem;
+    border-radius: 50%;
+    border:#000 solid 10px;
+}
+.size{
+    height: 15rem;
+    width: 15rem;
+    border-right:#000 solid 10px;
+    border-bottom: #000 solid 10px;
+}
+.green{
+    background-color:green;
+}
+.red{
+    background-color:red;
+}
+.yellow{
+    background-color:yellow;
+}
+.blue{
+    background-color:blue;
+}
+.button-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr
+}
+label{
+    display:block;
+}
+.screen{
+    margin: 1rem auto;
+    width: 3rem;
+    height: 1.5rem;
+    color: red;
+    background-color: rgb(46, 10, 10);
+    border-style: groove;
+}
+#start{
+    border-style: none;
+    border-radius: 50%;
+    background: #fff;
+    padding:.5rem;
+    font-weight: 700;
+    border-style: outset;
+}
+#start:active{
+    border:solid red 2px;
+}
+.pc-typing, .player-typing{
+  position: relative;
+  bottom: -100px;
+  width: 100px;
+}
+.start{
+    color:orange;
+}
+#power,#strict{
+    display: none;
+}
+.power{
+    margin-top:0.6rem;
+    margin-left:0.6rem;
+    font-weight: 700;
+    background-color: #fff;
+    color: #ccc;
+    width: 3.5rem;
+    padding: .1rem;
+    border-radius: 50%;
+    border-style: outset;
+}
+#power:checked ~ .power{
+    color:red;
+}
+.strict{
+    margin-top:0.6rem;
+    margin-left:0.3rem;
+    font-weight: 700;
+    background-color: #fff;
+    color: #ccc;
+    width: 3.5rem;
+    padding: .1rem;
+    border-radius: 50%;
+    border-style: outset;
+}
+#strict:checked ~ .strict{
+    color:red;
+}
+

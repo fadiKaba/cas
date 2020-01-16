@@ -1,0 +1,183 @@
+body{
+	background-image:url("./simg/casino.jpg");
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center;
+}
+/*.main-container{
+	display:grid;
+	grid-template-columns: 80% 20%;
+	width:80%;
+	margin:auto;
+	height:80vh;
+	margin:
+}*/
+
+.main-container{
+	background-image:radial-gradient(rgb(247, 155, 129), rgb(88, 7, 6));
+	background-size:cover;
+	backgroound-position:center;
+	display:grid;
+	grid-template-areas:
+	'header header header header'
+    'roll roll roll hand'
+	'foot foot foot foot';
+	width:80%;
+	margin:auto;
+	box-shadow:5px 5px 5px #000;
+	border-radius:50px 50px 0 0;
+}
+.m-head{
+	grid-area:header;
+	border: 3px ridge #D9D6CF;
+	border-radius:50px 50px 0 0;
+	height:200px;
+	background-image:url("./simg/head.jpg");
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center;
+}
+.m-head > p{
+	background-color:#000;
+	color:#00CCCC;
+	display:inline-block;
+	margin-left:20px;
+	padding:10px;
+	font-size:30px;
+	font-family: 'Orbitron', sans-serif;
+	color: #00CCCC;
+	border: 3px ridge #D9D6CF;
+}
+#roll-container{
+	grid-area:roll;
+	display:flex;
+	justify-content: center;
+	border: 3px ridge #D9D6CF;
+	box-shadow:inset 5px 5px 5px #000;
+}
+.roll{
+	width:15%;
+	height:200px;
+	font-size:3rem;
+	background-color: rgb(230, 222, 223);
+	border: 3px ridge #D9D6CF;
+	border-radius:5px;
+	padding:10px;
+	margin:10px 5px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	box-shadow:inset 5px 5px 5px #000;
+}
+.roll > img{
+	width: 100%;
+}
+.hand-container{
+	grid-area: hand;
+	border: 3px ridge #D9D6CF;
+	box-shadow:inset 5px 5px 5px #000;
+}
+.hand-container > div:nth-child(1){
+	height:180px;
+	width:120px;
+	background-image: url("./simg/metalw.png");
+	background-size:cover;
+	background-position:center;
+	margin:10px auto 0 auto;
+	padding:5px;
+	border: 3px ridge #D9D6CF;
+	border-radius: 3px;
+	box-shadow:inset 5px 5px 5px #000;
+}
+.hand-container > div:nth-child(2){
+	text-align: center;
+}
+.hand-container > div:nth-child(2) > p{
+	background-color: #000;
+	color: #00CCCC;
+	margin: 5px 10px 0 10px;
+	text-align: center;
+	font-weight: 700;
+	font-size: 1.5rem;
+	border: 3px ridge #D9D6CF;
+	font-family: 'Orbitron', sans-serif;
+}
+.hand-container > div:nth-child(2) > button{
+   width: 45%;
+   margin-bottom:2px;
+}
+.hand-container div div{
+	cursor:pointer;
+	height:100px;
+	width:100px;
+	background-image: url("./simg/ball.png");
+	background-position:center;
+	background-size:cover;
+	border-radius: 50%;
+	margin:15px auto;
+	background-image: radial-gradient(#fff, #000);
+	box-shadow: 5px 5px 10px #000;
+    
+}
+.foot{
+	grid-area:foot;
+	height:180px;
+	background-image:url("./simg/head.jpg");
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center;
+	border: 3px ridge #D9D6CF;
+}
+.foot > .screen{
+	background-color:#000;
+	font-size:2rem;
+	width:80%;
+	text-align:center;
+	margin:10px auto 0 auto;
+	font-family: 'Orbitron', sans-serif;
+	color: #00CCCC;
+	border: 3px ridge #D9D6CF;
+}
+.foot > .screen > p{	
+	margin:0;
+	display:inline-block;	
+}
+.trans{
+	animation: trans 1s;
+}
+.rot{
+	animation: rot 0.1s linear infinite;
+}
+.home-btn{
+	cursor:pointer;
+	border:none;
+	padding:3px 10px;
+	background-image: radial-gradient(#fff, #000);
+	color: #000;
+	font-weight:bold;
+	border-radius:5px;
+	text-decoration: none;
+	box-shadow:2px 2px 2px #000;
+}
+.home-btn:active{
+	transform:translatey(1px);
+}
+@-webkit-keyframes trans{
+	0%{
+		transform: translate(0px, 0px);
+	}
+	50%{
+		transform: translate(0px, 50px);
+	}
+	100%{
+		transform: translate(0px, 0px);
+	}
+}
+@-webkit-keyframes rot{
+	0%{
+		transform: rotateZ(0deg);
+	}
+	100%{
+		transform: rotateZ(360deg);
+	}
+}
