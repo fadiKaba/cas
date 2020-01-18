@@ -15,6 +15,7 @@ var stopSound = new Audio('./audio/stop.mp3');
 one = 0;
 two = 0;
 three = 0;
+again = true;
 
 total = 60;
 roll = 0;
@@ -73,7 +74,10 @@ minusEvent();
 shapes = {0: "./simg/7.jpg", 1: "./simg/banana.jpg", 2: "./simg/bar.jpg", 3: "./simg/bigwin.jpg",
 4: "./simg/cherry.jpg", 5: "./simg/lemon.jpg",6: "./simg/orange.jpg", 7: "./simg/qq.jpg", 8: "./simg/waterm.jpg"};
 
+
 rollBtn.addEventListener("click", ()=>{
+	if(again == true){
+	again = false;
 	if(total > 0){
 		if(bet <= total){
 			spinSound.play();
@@ -114,19 +118,26 @@ rollBtn.addEventListener("click", ()=>{
 				user.innerHTML = name +': ' + total +'$ | Bet: ' + bet + '$';
 				spinSound.pause();
 				spinSound.currentTime = 0;
+				again = true;
 			});
 		}else{
 			bet = total;
 			betScreen.innerHTML ='Bet: ' + bet + '$';
+			again = true;
 		}
 	}else{
 		screen.innerHTML = "You have no more money!";
 		con = confirm("Reste game?")
 		if(con == true){
 			total += 60;
+			bet = 10;
 			user.innerHTML = name +': ' + total +'$ | Bet: ' + bet + '$';
+			betScreen.innerHTML ='Bet: ' + bet + '$';
 			addClassToMany(screen,'p', '', '-');
+			again = true;
 		}
+		again = true;
+	}
 	}
 });
 
