@@ -21,7 +21,7 @@ roll = 0;
 bet = 10;
 
 var name = prompt('Your name: ');
-if(name == '' || name == null){
+if(name == '' || name == 'null'){
 	name = "Player";
 }
 
